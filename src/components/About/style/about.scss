@@ -1,0 +1,38 @@
+@import '../../../style/colors';
+
+#about-section {
+  margin-top: 100px;
+  padding-left: 25px;
+
+  position: relative;
+
+  height: 80vh;
+}
+
+.about-wrapper {
+  display: flex;
+  column-gap: 300px;
+}
+
+.about-wrapper p {
+  color: $main-text-color;
+}
+
+.left-about {
+  min-width: 100px;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.tag-cloud-container .wrapper a:nth-child(odd) {
+  color: $main-color !important;
+  cursor: default;
+}
+
+.tag-cloud-container .wrapper a:nth-child(even) {
+  color: $secondary-color !important;
+  cursor: default;
+}

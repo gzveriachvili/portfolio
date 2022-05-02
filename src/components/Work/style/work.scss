@@ -1,0 +1,13 @@
+@import '../../../style/colors';
+
+#work-section {
+  position: relative;
+}
+
+.projects {
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 180px;
+}

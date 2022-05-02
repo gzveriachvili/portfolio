@@ -1,0 +1,44 @@
+@import '../../../style/colors';
+
+#contact-section {
+  margin-top: 200px;
+  position: relative;
+}
+
+#contact-section p {
+  margin-top: 30px;
+  max-width: 600px;
+  color: $main-text-color;
+}
+
+.contact-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.contact-links a {
+  color: $main-text-color;
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 1.2rem;
+}
+
+.contact-mail svg {
+  color: $main-color;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.contact-linkedin svg {
+  color: $secondary-color;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.contact-github svg {
+  color: $tertiary-color;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}

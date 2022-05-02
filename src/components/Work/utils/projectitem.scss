@@ -1,0 +1,70 @@
+@import '../../../style/colors';
+@import '../../../style/fonts';
+
+.project-item {
+  position: relative;
+}
+
+.project-item img {
+  max-width: 750px;
+}
+
+.desc-box {
+  max-width: 600px;
+  max-height: 250px;
+  padding: 30px;
+
+  background-color: #f0f1f2;
+
+  position: absolute;
+
+  top: 200px;
+  left: 500px;
+}
+
+.project-item h4 {
+  position: absolute;
+  font-size: 1.5rem;
+  color: $main-text-color;
+  background-color: $secondary-color;
+  padding: 2px 5px;
+  font-family: 'Radio Canada', sans-serif;
+  font-weight: map-get($font-weights, regular);
+  z-index: 1;
+  top: 180px;
+  left: 800px;
+}
+
+.description p:first-child {
+  margin-bottom: 10px;
+  color: $main-background;
+}
+
+.description p:last-child {
+  font-style: italic;
+  color: $tertiary-text-color;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+}
+
+.project-links a {
+  color: $main-background;
+  text-decoration: none;
+}
+
+.visit-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 5px;
+}
+
+.visit-link svg {
+  font-size: 1.2rem;
+}

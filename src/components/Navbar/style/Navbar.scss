@@ -1,0 +1,133 @@
+@import '../../../style/colors';
+@import '../../../style/fonts';
+
+#side-nav {
+  background-color: $secondary-background;
+  color: $secondary-text-color;
+}
+
+.side-nav-links ul {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  row-gap: 20px;
+}
+
+.strike-through {
+  text-decoration: $main-color line-through;
+}
+
+.side-nav-links ul > li {
+  font-weight: map-get($font-weights, regular);
+  font-size: 1rem;
+  font-family: 'Radio Canada', sans-serif;
+
+  border-top: 3.5px solid $main-background;
+  padding-top: 15px;
+  min-width: 100%;
+  text-align: center;
+}
+
+.side-nav-links ul > li a:hover {
+  color: $main-color;
+  cursor: pointer;
+}
+
+.side-nav-links ul > li p:nth-child(2) {
+  color: $tertiary-text-color;
+}
+
+.side-nav-links ul li:last-child {
+  border-bottom: 3.5px solid $main-background;
+  padding-bottom: 15px;
+}
+
+.side-nav-links ul li:first-child {
+  background-color: $logo-background;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  padding: 15px;
+  border: none;
+
+  margin-bottom: 30px;
+}
+
+.side-nav-links ul li:first-child img {
+  width: 120px;
+  margin-bottom: 5px;
+}
+
+.side-nav-links ul li:first-child img:hover {
+  animation: bounce 1.3s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.side-nav-links a {
+  color: $secondary-text-color;
+  text-decoration: none;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.side-nav-links ul li:first-child h5 {
+  color: $main-text-color;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Kabel';
+}
+
+.side-nav-contact ul {
+  display: flex;
+
+  list-style-type: none;
+  justify-content: center;
+
+  margin-top: 35px;
+  column-gap: 15px;
+}
+
+.side-nav-contact svg {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.side-nav-contact svg {
+  color: $secondary-text-color;
+  transition: color 0.2s ease-in-out;
+}
+
+.side-nav-contact svg:hover {
+  color: $main-color;
+}
+
+.some-class {
+  color: red;
+}

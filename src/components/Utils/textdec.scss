@@ -1,0 +1,15 @@
+@import '../../style/colors';
+
+.text-dec h1 {
+  position: absolute;
+  text-transform: uppercase;
+  color: $secondary-background;
+  font-size: 18rem;
+
+  top: -60px;
+  right: 10px;
+
+  z-index: -2;
+  cursor: default;
+  user-select: none;
+}

@@ -1,0 +1,36 @@
+@import '../../../../style/colors';
+@import '../../../../style/fonts';
+
+.wrapper {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.typing-effect {
+  width: 22ch;
+  animation: typing 4s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4.5px solid;
+  max-width: 48vw;
+  color: $main-color;
+  font-family: 'Kabel';
+  font-size: 5.5rem;
+
+  cursor: default;
+  user-select: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

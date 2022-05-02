@@ -1,0 +1,204 @@
+@import '../../../style/colors';
+@import '../../../style/fonts';
+
+.welcome {
+  height: 100vh;
+  position: relative;
+}
+
+.welcome img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -user-drag: none;
+}
+
+.welcome h2 {
+  position: absolute;
+  color: $main-color;
+  font-size: 5rem;
+  font-family: 'Kabel';
+
+  top: 215px;
+  left: 230px;
+
+  cursor: default;
+}
+
+.welcome p {
+  position: absolute;
+  color: $secondary-text-color;
+  font-size: 1.5rem;
+  font-weight: map-get($font-weights, light);
+
+  position: absolute;
+  top: 48%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+
+  cursor: default;
+}
+
+.interaction-icon svg {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  color: $main-text-color;
+  background-color: $secondary-color;
+  border-radius: 90px;
+  padding: 12px;
+
+  font-size: 3rem;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 270px;
+  cursor: pointer;
+
+  top: 21%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.btn-two {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  top: 88%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+
+  cursor: default;
+  user-select: none;
+}
+
+.container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.arrows {
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.arrows:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.arrows:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.arrows:before,
+.arrows:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: $main-color;
+}
+
+.arrows:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.arrows:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-left: -30px;
+  font-family: 'Radio Canada', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

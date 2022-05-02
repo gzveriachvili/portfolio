@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: Kabel;
+  src: url(../components/Navbar/assets/fonts/ITCKabelStd-Book.otf);
+}
+
+@font-face {
+  font-family: KabelBD;
+  src: url(../components/Navbar/assets/fonts/KabelBdNormal.ttf);
+}
+
+$font-weights: (
+  'extra-light': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+);

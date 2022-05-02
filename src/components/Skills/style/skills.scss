@@ -1,0 +1,57 @@
+@import '../../../style/colors';
+
+#skills-section {
+  position: relative;
+  height: 100vh;
+}
+
+.skills-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills-languages,
+.skills-libraries,
+.skills-misc {
+  background-color: $logo-background;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 25px;
+
+  display: grid;
+  gap: 18px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills-wrapper i {
+  color: $main-text-color;
+  font-size: 3.5rem;
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+.skills-wrapper i:hover {
+  color: $secondary-text-color;
+}
+
+.skills-wrapper h3 {
+  color: $main-text-color;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.skills-languages {
+  border-top: 3px solid $main-color;
+}
+
+.skills-libraries {
+  border-top: 3px solid $secondary-color;
+}
+
+.skills-misc {
+  border-top: 3px solid $tertiary-color;
+}

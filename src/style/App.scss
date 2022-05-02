@@ -1,0 +1,22 @@
+@import './colors';
+
+.App {
+  display: flex;
+}
+
+.App .side {
+  background-color: $secondary-background;
+  min-height: 100vh;
+
+  position: fixed;
+  z-index: 2;
+}
+
+.App .main {
+  margin-left: 13vw;
+}
+
+.App .main p {
+  font-family: 'Radio Canada';
+  line-height: 1.3rem;
+}
