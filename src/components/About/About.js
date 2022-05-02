@@ -2,41 +2,13 @@ import Heading from '../Utils/Heading';
 import TextDec from '../Utils/TextDecoration';
 import TagCloudAnim from '../Utils/TagCloud';
 import './style/about.scss';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
-import { useAnimation } from 'framer-motion';
 
 const About = () => {
-  const { ref, inView } = useInView();
-
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: {
-          type: 'spring',
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: '-100vw',
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inView]);
-
   return (
-    <div ref={ref} id='about-section'>
+    <div id='about-section'>
       <Heading title='About Me' />
       <TextDec heading='about' />
-      <motion.div className='about-wrapper' animate={animation}>
+      <div className='about-wrapper'>
         <div className='left-about'>
           <p>
             At first it started as a little hobby; If there were any fun student
@@ -59,7 +31,7 @@ const About = () => {
         <div className='right-about'>
           <TagCloudAnim />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

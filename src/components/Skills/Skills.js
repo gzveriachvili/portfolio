@@ -1,40 +1,13 @@
 import Heading from '../Utils/Heading';
 import TextDec from '../Utils/TextDecoration';
 import './style/skills.scss';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
-import { useAnimation } from 'framer-motion';
 
 const Skills = () => {
-  const { ref, inView } = useInView();
-
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: {
-          type: 'spring',
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: '-100vw',
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inView]);
   return (
-    <div ref={ref} id='skills-section'>
+    <div id='skills-section'>
       <Heading title='Skills &amp; Tools' />
       <TextDec heading='skills' />
-      <motion.div className='skills-wrapper' animate={animation}>
+      <div className='skills-wrapper'>
         <div className='skills-languages-wrapper'>
           <h3>Languages</h3>
           <div className='skills-languages'>
@@ -75,7 +48,7 @@ const Skills = () => {
             <i class='devicon-arduino-plain'></i>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
