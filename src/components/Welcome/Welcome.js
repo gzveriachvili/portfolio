@@ -6,6 +6,9 @@ import { FaMousePointer } from 'react-icons/fa';
 import background from './assets/img/background.svg';
 
 const Welcome = () => {
+  const toBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
   return (
     <div className='welcome'>
       <img src={background} alt='' srcset='' />
@@ -16,7 +19,7 @@ const Welcome = () => {
       </span>
       <p>Web Developer / Graphic Design Enthusiast</p>
 
-      <div class='btn btn-two'>
+      <div onClick={toBottom} class='btn btn-two'>
         <span>Contact Me</span>
       </div>
 

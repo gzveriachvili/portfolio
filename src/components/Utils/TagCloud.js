@@ -21,7 +21,7 @@ class TagCloudAnim extends React.Component {
     ];
     return (
       <div style={{ 'margin-top': '30px' }}>
-        <TagCloud url='#' tagName={tagName}></TagCloud>
+        <TagCloud url='#' tagName={tagName} speed={1} radius={220}></TagCloud>
       </div>
     );
   }
