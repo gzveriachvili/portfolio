@@ -25,7 +25,7 @@ const Skills = () => {
           <h3>Libraries/Frameworks</h3>
           <div className='skills-libraries'>
             <i class='devicon-react-original-wordmark'></i>
-            <i class='devicon-redux-original'></i>
+            {/*<i class='devicon-redux-original'></i>*/}
             <i class='devicon-jest-plain'></i>
             <i class='devicon-bootstrap-plain-wordmark'></i>
             <i class='devicon-jquery-plain-wordmark'></i>
